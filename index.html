@@ -56,18 +56,31 @@
     .challenges-content-list
     {
         display: flex;
-        border: 5px dashed rgb(170, 214, 38);
-        margin: 15px 15px;
+        border: 3px dashed rgb(170, 214, 38);
+        margin: 15px 45px;
         text-align: center;
         align-items: center;
         padding: 15px 15px;
+        transition: transform .7s;
         
+    }
+
+    .challenges-content-list:hover
+    {
+        transform: scale(1.1);
+        border: 3px solid green;
     }
 
     .challenges-content a
     {
         text-decoration: none;
         color: rgb(109, 214, 100);
+        width: 100%
+    }
+
+    .challenges-content a:hover
+    {
+        color: black;
     }
 
 </style>
@@ -81,7 +94,7 @@
         </div>
         
         <div class="challenges-content">
-            <div class="challenges-content-list challenges-content-list1"><a href="#">Pomodoro Timer</a></div>
+            <div class="challenges-content-list challenges-content-list1"><a href="pomodoro-timer.html">Pomodoro Timer</a></div>
             <div class="challenges-content-list challenges-content-list2"><a href="#">eCommerce</a></div>
             <div class="challenges-content-list challenges-content-list3"><a href="#">Creating a keyboard</a></div>
             <div class="challenges-content-list challenges-content-list4"><a href="#">Create a computer keyboard</a></div>
