@@ -25,15 +25,15 @@
     <div class="timer">
       <div class="time">
         <div class="minutes">
-          <input type="text" value="15" disabled />
+          <input type="text" id="minutes_input" value="00" disabled />
         </div>
         <div class="colon">:</div>
         <div class="seconds">
-          <input type="text" value="00" disabled />
+          <input type="text" id="seconds_input" value="05" disabled />
         </div>
       </div>
       <button onclick="change_start_stop()" id="start_stop" class="start">start</button>
-      <button class="settings">
+      <button  id="settings" class="settings">
         <img src="images/gear.svg" alt="Settings" />
       </button>
     </div>
