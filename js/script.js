@@ -9,10 +9,10 @@ function validate_for_seconds()
     var value_of_seconds = document.getElementById("seconds_input").value; 
     
     if(value_of_seconds > 60)
-        return false;
+        return true;
     
     else
-        return true;
+        return false;
     
 }
 
@@ -25,6 +25,12 @@ function change_start_stop()
 
     if(value_of_start_stpop.innerHTML == "Start")
     {
+        var value_of_minutes = document.getElementById("minutes_input").value;
+
+        if(value_of_minutes < 0)
+        {
+            document.getElementById("minutes_input").value = 00;
+        }
 
         if(validate_for_seconds())
         {
