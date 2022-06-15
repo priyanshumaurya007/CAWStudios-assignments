@@ -16,7 +16,7 @@ function change_start_stop()
         if(validate_for_seconds())
         {
             value_of_seconds = document.getElementById("seconds_input").value; 
-            alert("You have enter "+ value_of_seconds + " that is greater than ")
+            alert("You have enter "+ value_of_seconds + " that is greater than 60")
         }
         disable_button_on();
         value_of_start_stpop.innerHTML = "Stop";
