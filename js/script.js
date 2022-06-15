@@ -51,6 +51,7 @@ function change_start_stop()
     }
 }
 
+// function to run the clock and check the condition
 
 function start_counter()
 {
