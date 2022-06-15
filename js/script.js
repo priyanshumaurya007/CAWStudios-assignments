@@ -66,7 +66,9 @@ function start_counter()
     if(seconds_value == 0 && minutes_value == 0)
     {
         document.querySelector(".ring").style.stroke = "red";
-        alert("Time over");
+        setTimeout(function() {
+            alert("Time over");
+        },100);
         clearInterval(check);  
         disable_button_off();
         document.getElementById("start_stop").innerHTML = "Start";
@@ -79,6 +81,7 @@ function start_counter()
         if(seconds_value == 0)
         {
             minutes_value--;
+            minutes_value = ("0" + minutes_value).slice(-2);
             minutes.value = minutes_value;
             seconds.value = 60;
         }
@@ -87,6 +90,7 @@ function start_counter()
         else
         {
             seconds_value--;
+            seconds_value = ("0" + seconds_value).slice(-2);
             seconds.value = seconds_value;
         }
     }
