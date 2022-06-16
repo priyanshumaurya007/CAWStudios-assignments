@@ -16,6 +16,29 @@ function validate_for_seconds()
     
 }
 
+// function to set minutes and seconds to 0
+
+function set_to_zero()
+{
+    document.getElementById("minutes_input").value = "0" + 0;
+    document.getElementById("seconds_input").value = "0" + 0;
+}
+
+// functions to validate time 
+
+function validate_time()
+{
+    var value_of_seconds = document.getElementById("seconds_input").value;
+    var value_of_minutes = document.getElementById("minutes_input").value;
+
+    if(!(value_of_seconds >=0 && value_of_seconds <= 60) || !(value_of_minutes >= 0 && value_of_minutes <= 60))
+    {
+        return true;
+    }
+
+    return false;
+}
+
 // functions to check for seconds greater than 60;
 
 function change_start_stop()
@@ -25,6 +48,7 @@ function change_start_stop()
 
     if(value_of_start_stpop.innerHTML == "Start")
     {
+          
         var value_of_minutes = document.getElementById("minutes_input").value;
 
         if(value_of_minutes < 0)
@@ -36,7 +60,17 @@ function change_start_stop()
         {
             var value_of_seconds = document.getElementById("seconds_input").value; 
             alert("You have enter "+ value_of_seconds + " that is greater than 60, Please enter in the correct format");
+            disable_button_off();
+            set_to_zero();
             return ;
+        }
+
+        if(validate_time())
+        {
+            alert("please enter in the correct format (numbers in 2 digits)");
+            disable_button_off();
+            set_to_zero();
+            return;
         }
         disable_button_on();
         value_of_start_stpop.innerHTML = "Stop";
