@@ -3,6 +3,7 @@
 body {
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   min-height: 100vh;
   min-width: 100vw;
@@ -88,4 +89,26 @@ h1 {
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+/* navbar */
+
+.navbar
+{
+  height: 100%;
+  width: 100%;
+}
+
+.navbar a
+{
+  height: 1rem;
+  width: 1rem;
+}
+
+.navbar img
+{
+  height: 3rem;
+  width: 3rem;
+  border-radius: 1.5rem;
 }
