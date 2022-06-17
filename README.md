@@ -1,21 +1,25 @@
-![Advent of JavaScript](https://adventofjavascript.s3.us-east-1.amazonaws.com/2021/advent-of-js-gumroad-cover.png)
+# Typography
 
-# Day 1 - Pomodoro Timer
+Poppins - Regular and Bold
+https://fonts.google.com/specimen/Poppins?query=poppins
 
-## Overview
+# Colors
 
-These are the starter files and a suggested solution to the Pomodoro Timer.
-You can find more details about the challenge by [logging into Podia.](https://store.selfteach.me/login)
+- Background color - #EFF0F6
+- Border Color - #D7D7F9
+- Primary - #6B00F5
+- Pattens Blue - #e1f1fe
+- Pale Rose - #ffe2f0
+- Ghost White - #f7f7fe
+- White Ice - #defef0
 
-## Challenge
+# Content
 
-Within the _STARTER-FILES_ folder, you'll find everything you need to get started.
-
-Users should be able to:
-
-- Start and Stop the Timer
-- Click on the gear icon to change the length (minutes and seconds) for the timer.
-
-
-Link for the challenges : https://priyanshumaurya007.github.io/CAWStudios-assignments/
-
+- French Fries with Ketchup - $2.23
+- Salmon and Vegetables - $5.12
+- Spaghetti with Meat Sauce - $7.82
+- Chicken Salad with Parmesean - $6.98
+- Fish Sticks and Fries - $6.34
+- Ravioli - $6.45
+- Tortellini - $6.05
+- Bacon, Eggs, and Toast - $5.99
