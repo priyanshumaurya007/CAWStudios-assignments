@@ -150,6 +150,7 @@ function disable_button_on()
 document.getElementById('settings').onclick = function() {
     var disabled = document.getElementById("minutes_input").disabled;
     clearInterval(check);
+    set_to_zero();
     document.getElementById("start_stop").innerHTML = "Start";
     if (disabled) {
         disable_button_off();
