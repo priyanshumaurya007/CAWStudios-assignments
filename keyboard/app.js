@@ -33,10 +33,22 @@ document.addEventListener('keydown', function(event){
     }
     else
     {
-        document.querySelector("keyboard").classList.add("error");
+        showError();
+        
     }
 
 })
+
+// function to throw error 
+
+const showError = ()=>{
+
+    document.getElementById('keyboard').classList.add('error');
+        setTimeout(()=>{
+            
+            document.getElementById('keyboard').classList.remove('error');
+        },500)
+};
 
 // first call 
 randomValueGenerator();
