@@ -118,7 +118,9 @@ h1 {
 
 /* when user typed wrong key */
 
-.error{
+.errorKey{
 
-  border: 10px solid red;
+  background-color: red;
+  color: #ffd200;
+
 }

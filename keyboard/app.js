@@ -1,13 +1,14 @@
 let dataKeyValue, randomValue;
+let keyAll = document.getElementsByClassName("key");
 
 
 // random value generator to jiggle a random key
 
 const randomValueGenerator = ( ) => {
 
-    randomValue = Math.floor((Math.random() * 53) + 1);
-    document.getElementById('' + randomValue).classList.add("jiggle");
-    dataKeyValue = document.getElementById('' + randomValue).getAttribute("data-key");
+    randomValue = Math.floor((Math.random() * 53) );
+    keyAll[randomValue].classList.add("jiggle");
+    dataKeyValue = keyAll[randomValue].getAttribute("data-key");
     console.log("new key jiggled");
 
 };
@@ -15,7 +16,7 @@ const randomValueGenerator = ( ) => {
 // function to remove jiggle 
 
 const removeJiggle = () =>{
-    document.getElementById("" + randomValue).classList.remove("jiggle");;
+    keyAll[randomValue].classList.remove("jiggle");;
     console.log("jiggle removed");
 }
 
@@ -33,22 +34,16 @@ document.addEventListener('keydown', function(event){
     }
     else
     {
-        showError();
+        document.querySelector(`button[data-key="${pressedKey}"]`).classList.add("errorKey");
+
+        setTimeout(function()
+        {
+            document.querySelector(`button[data-key="${pressedKey}"]`).classList.remove("errorKey");
+        }, 200);
         
     }
 
 })
-
-// function to throw error 
-
-const showError = ()=>{
-
-    document.getElementById('keyboard').classList.add('error');
-        setTimeout(()=>{
-            
-            document.getElementById('keyboard').classList.remove('error');
-        },500)
-};
 
 // first call 
 randomValueGenerator();
