@@ -26,7 +26,9 @@ const removeJiggle = () =>{
 document.addEventListener('keydown', function(event){
     console.log(event);
     let pressedKey = event.key.toUpperCase();
-    console.log(pressedKey);
+    if(pressedKey=="TAB"){
+        event.preventDefault();
+    }
     if(dataKeyValue == pressedKey)
     {
         removeJiggle();
