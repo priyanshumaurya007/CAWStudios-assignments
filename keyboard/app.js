@@ -23,13 +23,17 @@ const removeJiggle = () =>{
 
 
 document.addEventListener('keydown', function(event){
-
+    console.log(event);
     let pressedKey = event.key.toUpperCase();
-
+    console.log(pressedKey);
     if(dataKeyValue == pressedKey)
     {
         removeJiggle();
         randomValueGenerator();
+    }
+    else
+    {
+        document.querySelector("keyboard").classList.add("error");
     }
 
 })
