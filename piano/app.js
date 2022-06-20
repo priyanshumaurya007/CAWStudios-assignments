@@ -2,17 +2,16 @@
 const allKey = document.querySelectorAll(".key");
 
 // function to play song using id
-const playSong = (element) => {
+const playSong = (element, idx) => {
 
-    let keyId = element.id;
-    let audio = new Audio('audio/key-' + (keyId) + '.mp3');
-    console.log(keyId);
+    let audio = new Audio('audio/key-' + (idx+1) + '.mp3');
+    console.log(idx);
     audio.play();
 
 }
 
 // use to call playSong function
-allKey.forEach((element) => {
+allKey.forEach((element, idx) => {
 
-    element.addEventListener('click', () => playSong(element));
+    element.addEventListener('click', () => playSong(element, idx));
 })
