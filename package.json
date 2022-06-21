@@ -1,0 +1,36 @@
+{
+  "name": "CAWStudios-assignments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install client/.husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priyanshumaurya007/CAWStudios-assignments.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priyanshumaurya007/CAWStudios-assignments/issues"
+  },
+  "homepage": "https://github.com/priyanshumaurya007/CAWStudios-assignments#readme",
+  "devDependencies": {
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.2",
+    "prettier": "^2.7.1",
+    "pretty-quick": "^3.1.3"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx pretty-quick --staged && npx lint-staged"
+    }
+  }
+}
