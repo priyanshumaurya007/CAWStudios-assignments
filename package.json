@@ -32,5 +32,8 @@
     "hooks": {
       "pre-commit": "npx pretty-quick --staged && npx lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.js" : ["eslint","prettier"]
   }
 }
