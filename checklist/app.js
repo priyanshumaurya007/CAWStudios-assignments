@@ -151,42 +151,11 @@ const episodes = [
 
 
 const checkboxes = document.querySelectorAll( 'input[type="checkbox"]' );
-let lastCheckedBox;
 
-
-
-// const checkMultiplebox = (event) =>{
-
-//       let checkedBetween = false;
-
-//       if(event.shiftKey && this.checked)
-//       {
-//           allCheckBoxes.forEach(checkbox =>{
-//             if(checkbox === this || checkbox === lastCheckedBox)
-//             {
-//                 checkedBetween = !checkedBetween;
-//             }
-
-//             if(checkedBetween)
-//             {
-//               checkbox.checked = true;
-//             }
-
-//           });
-//       }
-//       lastCheckedBox = this;
-// }
-
-
-// allCheckBoxes.forEach(checkbox =>
-// {
-//     checkbox.addEventListener('click', checkMultiplebox);
-// })
-
-
-
+// variable to store last checked
 let lastChecked;
 
+// function to check all between last and current checked
 document.onselectstart=new Function("return false");
 function handleCheck( e ) {
     let inBetween =  false;
@@ -195,7 +164,7 @@ function handleCheck( e ) {
             if( checkbox === this || checkbox === lastChecked ) {
                 inBetween = !inBetween;
             }
-            if( inBetween ) {
+            if( inBetween && lastChecked ) {
                 checkbox.checked = true;
             }
         });
