@@ -159,13 +159,14 @@ let lastChecked;
 document.onselectstart=new Function("return false");
 function handleCheck( e ) {
     let inBetween =  false;
-    if( e.shiftKey && this.checked ) {
+    let state = e.target.checked;
+    if( e.shiftKey ) {
         checkboxes.forEach( checkbox => {
             if( checkbox === this || checkbox === lastChecked ) {
                 inBetween = !inBetween;
             }
             if( inBetween && lastChecked ) {
-                checkbox.checked = true;
+                checkbox.checked = state;
             }
         });
     }
