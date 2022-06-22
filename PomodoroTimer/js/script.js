@@ -57,8 +57,6 @@ const validate_time = ()=>{
 
 // functions to check for seconds greater than 60;
 
-const startingButton = document.querySelector("#start_stop");
-
 const change_start_stop = ()=>{
 
     var value_of_start_stpop = document.getElementById("start_stop");
@@ -102,7 +100,6 @@ const change_start_stop = ()=>{
     }
 }
 
-startingButton.addEventListener('click', change_start_stop());
 
 // function to run the clock and check the condition
 
