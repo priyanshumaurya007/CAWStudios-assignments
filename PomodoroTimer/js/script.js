@@ -1,72 +1,20 @@
+import {disable_button_off, disable_button_on, validate_for_seconds, set_to_zero, validate_time} from "./utilities.js";
+
+// to store the interval and we can kill it whenever required
 let check;
-
-// function to check that second should be less than or equal to 60
-
-const validate_for_seconds = ()=>{
-
-    var value_of_seconds = document.getElementById("seconds_input").value; 
-    
-    if(value_of_seconds > 60)
-        return true;
-    
-    else
-        return false;
-    
-}
-
-// function to enable the timing entry space
-
-const disable_button_off = ()=>{
-
-    document.getElementById("minutes_input").disabled = false;
-    document.getElementById("seconds_input").disabled = false;
-
-}
-
-// function to disable the timing entry space
-
-const disable_button_on = ()=>{
-    
-    document.getElementById("minutes_input").disabled = true;
-    document.getElementById("seconds_input").disabled = true;
-
-}
-
-// function to set minutes and seconds to 0
-
-const set_to_zero = ()=>{
-
-    document.getElementById("minutes_input").value = "0" + 0;
-    document.getElementById("seconds_input").value = "0" + 0;
-}
-
-// functions to validate time 
-
-const validate_time = ()=>{
-
-    var value_of_seconds = document.getElementById("seconds_input").value;
-    var value_of_minutes = document.getElementById("minutes_input").value;
-
-    if(!(value_of_seconds >=0 && value_of_seconds <= 60) || !(value_of_minutes >= 0 && value_of_minutes <= 60))
-    {
-        return true;
-    }
-
-    return false;
-}
 
 
 // functions to check for seconds greater than 60;
 
-const change_start_stop = 
-document.getElementById('start_stop').onclick = function () {
 
-    var value_of_start_stpop = document.getElementById("start_stop");
+document.getElementById('start_stop').onclick = function() {
+
+    let value_of_start_stpop = document.getElementById("start_stop");
 
     if(value_of_start_stpop.innerHTML == "Start")
     {
           
-        var value_of_minutes = document.getElementById("minutes_input").value;
+        let value_of_minutes = document.getElementById("minutes_input").value;
 
         if(value_of_minutes < 0)
         {
@@ -75,7 +23,7 @@ document.getElementById('start_stop').onclick = function () {
 
         if(validate_for_seconds())
         {
-            var value_of_seconds = document.getElementById("seconds_input").value; 
+            let value_of_seconds = document.getElementById("seconds_input").value; 
             alert("You have enter "+ value_of_seconds + " that is greater than 60, Please enter in the correct format");
             disable_button_off();
             set_to_zero();
@@ -107,11 +55,11 @@ document.getElementById('start_stop').onclick = function () {
 
 const start_counter = ()=>{
 
-    var minutes = document.getElementById("minutes_input");
-    var seconds = document.getElementById("seconds_input");
+    let minutes = document.getElementById("minutes_input");
+    let seconds = document.getElementById("seconds_input");
 
-    var minutes_value = minutes.value;
-    var seconds_value = seconds.value;
+    let minutes_value = minutes.value;
+    let seconds_value = seconds.value;
 
 
     // when both seconds and minutes reaches to 0
@@ -154,7 +102,7 @@ const start_counter = ()=>{
 // function to change the value of timing by setting button
 
 document.getElementById('settings').onclick = function() {
-    var disabled = document.getElementById("minutes_input").disabled;
+    let disabled = document.getElementById("minutes_input").disabled;
     clearInterval(check);
     set_to_zero();
     document.getElementById("start_stop").innerHTML = "Start";
