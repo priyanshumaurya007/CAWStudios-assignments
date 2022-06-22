@@ -1,6 +1,8 @@
+// import { disable_button_off, disable_button_on } from "./utilities.js";
+
 // function to change start to stop and vice versa
 
-var check;
+let check;
 
 // function to check that second should be less than or equal to 60
 
@@ -14,6 +16,20 @@ const validate_for_seconds = ()=>{
     else
         return false;
     
+}
+
+const disable_button_off = ()=>{
+
+    document.getElementById("minutes_input").disabled = false;
+    document.getElementById("seconds_input").disabled = false;
+
+}
+
+const disable_button_on = ()=>{
+    
+    document.getElementById("minutes_input").disabled = true;
+    document.getElementById("seconds_input").disabled = true;
+
 }
 
 // function to set minutes and seconds to 0
@@ -41,6 +57,8 @@ const validate_time = ()=>{
 
 // functions to check for seconds greater than 60;
 
+const startingButton = document.querySelector("#start_stop");
+
 const change_start_stop = ()=>{
 
     var value_of_start_stpop = document.getElementById("start_stop");
@@ -52,7 +70,7 @@ const change_start_stop = ()=>{
 
         if(value_of_minutes < 0)
         {
-            document.getElementById("minutes_input").value = 00;
+            document.getElementById("minutes_input").value = 15;
         }
 
         if(validate_for_seconds())
@@ -83,6 +101,8 @@ const change_start_stop = ()=>{
         value_of_start_stpop.innerHTML = "Start"; 
     }
 }
+
+startingButton.addEventListener('click', change_start_stop());
 
 // function to run the clock and check the condition
 
@@ -130,19 +150,7 @@ const start_counter = ()=>{
 
 }
 
-const disable_button_off = ()=>{
 
-    document.getElementById("minutes_input").disabled = false;
-    document.getElementById("seconds_input").disabled = false;
-
-}
-
-const disable_button_on = ()=>{
-    
-    document.getElementById("minutes_input").disabled = true;
-    document.getElementById("seconds_input").disabled = true;
-
-}
 
 // function to change the value of timing by setting button
 
