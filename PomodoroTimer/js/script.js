@@ -4,8 +4,8 @@ var check;
 
 // function to check that second should be less than or equal to 60
 
-function validate_for_seconds()
-{
+const validate_for_seconds = ()=>{
+
     var value_of_seconds = document.getElementById("seconds_input").value; 
     
     if(value_of_seconds > 60)
@@ -18,16 +18,16 @@ function validate_for_seconds()
 
 // function to set minutes and seconds to 0
 
-function set_to_zero()
-{
+const set_to_zero = ()=>{
+
     document.getElementById("minutes_input").value = "0" + 0;
     document.getElementById("seconds_input").value = "0" + 0;
 }
 
 // functions to validate time 
 
-function validate_time()
-{
+const validate_time = ()=>{
+
     var value_of_seconds = document.getElementById("seconds_input").value;
     var value_of_minutes = document.getElementById("minutes_input").value;
 
@@ -41,8 +41,7 @@ function validate_time()
 
 // functions to check for seconds greater than 60;
 
-function change_start_stop()
-{
+const change_start_stop = ()=>{
 
     var value_of_start_stpop = document.getElementById("start_stop");
 
@@ -87,8 +86,8 @@ function change_start_stop()
 
 // function to run the clock and check the condition
 
-function start_counter()
-{
+const start_counter = ()=>{
+
     var minutes = document.getElementById("minutes_input");
     var seconds = document.getElementById("seconds_input");
 
@@ -131,15 +130,15 @@ function start_counter()
 
 }
 
-function disable_button_off()
-{
+const disable_button_off = ()=>{
+
     document.getElementById("minutes_input").disabled = false;
     document.getElementById("seconds_input").disabled = false;
 
 }
 
-function disable_button_on()
-{
+const disable_button_on = ()=>{
+    
     document.getElementById("minutes_input").disabled = true;
     document.getElementById("seconds_input").disabled = true;
 
