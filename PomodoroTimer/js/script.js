@@ -1,7 +1,3 @@
-// import { disable_button_off, disable_button_on } from "./utilities.js";
-
-// function to change start to stop and vice versa
-
 let check;
 
 // function to check that second should be less than or equal to 60
@@ -18,12 +14,16 @@ const validate_for_seconds = ()=>{
     
 }
 
+// function to enable the timing entry space
+
 const disable_button_off = ()=>{
 
     document.getElementById("minutes_input").disabled = false;
     document.getElementById("seconds_input").disabled = false;
 
 }
+
+// function to disable the timing entry space
 
 const disable_button_on = ()=>{
     
@@ -55,9 +55,11 @@ const validate_time = ()=>{
     return false;
 }
 
+
 // functions to check for seconds greater than 60;
 
-const change_start_stop = ()=>{
+const change_start_stop = 
+document.getElementById('start_stop').onclick = function () {
 
     var value_of_start_stpop = document.getElementById("start_stop");
 
