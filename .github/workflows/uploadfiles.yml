@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - develop
-      - feature/cicd
+      - feature/*
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -16,6 +16,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
       - name: Deploy
-        run: aws s3 sync ./output s3://vibhu.upamanyu-js-challenges
+        run: aws s3 sync ./output s3://priyanshu-js-challenges
       - name: Cloudfront CacheBurst
         run: aws cloudfront create-invalidation --distribution-id ${{secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID}} --paths "/"
