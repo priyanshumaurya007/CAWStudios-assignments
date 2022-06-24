@@ -143,9 +143,7 @@ h1 {
   border-radius: 1.5rem;
 }
 
-/* when user typed wrong key */
-
-.errorKey {
+.error-key {
   background-color: red;
   color: #ffd200;
 }

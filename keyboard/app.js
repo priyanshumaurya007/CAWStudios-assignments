@@ -31,12 +31,12 @@ document.addEventListener('keydown', function (event) {
   } else {
     document
       .querySelector(`button[data-key="${pressedKey}"]`)
-      .classList.add('errorKey');
+      .classList.add('error-key');
 
     setTimeout(function () {
       document
         .querySelector(`button[data-key="${pressedKey}"]`)
-        .classList.remove('errorKey');
+        .classList.remove('error-key');
     }, 200);
   }
 });

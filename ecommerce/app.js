@@ -110,7 +110,7 @@ const appendItem = (element, idx) => {
   listOfItems.append(divForContent);
 
   let divForButton = document.createElement('div');
-  divForButton.setAttribute('class', 'quantity__wrapper');
+  divForButton.setAttribute('class', 'quantity-wrapper');
   let decrementButton = document.createElement('button');
   decrementButton.setAttribute('class', 'decrease');
   img = document.createElement('img');
